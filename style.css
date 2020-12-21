@@ -1,0 +1,224 @@
+/* CSS Reset */
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/* This is written for scrolling  */
+html{
+    scroll-behavior: smooth;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;    
+    position: sticky;
+    top: 0px;
+    font-family: 'Baloo Bhai 2', cursive;
+    height: 80px;
+    z-index: 1;
+     /* Here z-index is used because the boxes in the website are appearing above the navbar (i.e navbar gets beneath the boxes) when we sroll down and to make the navbar appear, we are putting a value of z-index.  */
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;   
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+/* Navigation Bar: Logo and Image */
+#logo{
+    margin: 12px 18px;
+    }
+    #logo img{
+        margin: 3px 6px;
+        height: 65px;
+        width: 65px;
+        border-radius: 40px;
+    }
+    #logo img:hover{
+        cursor: pointer;
+    }
+
+
+
+    #navbar ul{
+        display: flex;     
+        
+    }
+    #navbar ul li{
+        list-style: none;
+        font-size: 1.2rem;
+    }
+    #navbar ul li a{
+        text-decoration: none;
+        padding: 3px 20px;
+        color: white;
+        border-radius: 10px;
+    }
+    #navbar ul li a:hover{
+        background-color: white;
+        color:black;
+    }
+
+    /* Home Section */
+    #home{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 415px;
+        font-family: 'Bree Serif', serif;
+    
+    }
+    #home::before{
+        content: "";
+        background: url(/BG-Image/bg1.jpg) no-repeat center center/cover;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 510px;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.85;
+    }
+    #home h1{
+        color: white;        
+        text-align: center;
+    }
+    #home p{
+        color: white;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    /* Services Section */
+    .services-container{
+        margin-top: 90px;
+    }
+    #services{
+        display: flex;
+        font-family: 'Bree Serif', serif;
+        position: relative;
+    }
+    #services .box{
+        border: 2px solid salmon;
+        margin: 5px 8px;
+        margin-bottom: 25px;
+        border-radius: 25px;
+    padding: 25px 40px;
+        background-color: #ffefef;
+    }       
+    
+    #services .box img{
+        height: 150px;
+        display: block;
+        margin: auto;
+    }
+
+    /* Clients-Section */
+    #client-section{
+        position: relative;
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    #client-section::before{
+        content: "";
+        background: url('/BG-Image/bg.jpg');
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        opacity: 0.7;
+
+    }
+    #client{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+   #client img{
+       height: 150px;
+   }
+   .client-item{
+       padding: 35px;
+   }
+
+   /* Contact-section */
+   #contact{
+    font-family: 'Bree Serif', serif;
+    position: relative;
+   }
+   #contact::before{
+       content: "";
+       background: url('/BG-Image/contact.jpg') no-repeat center center/cover;
+       position: absolute;
+       height: 100%;
+       width: 100%;
+       z-index: -1;
+       opacity: 0.7;
+
+   }
+   #contact-box{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+   }
+   #contact-box form{
+       width: 40%;
+   }
+   #contact-box input,
+   #contact-box textarea{
+    width: 100%;
+    padding: 4px;
+    font-size: 16px;
+    border-radius: 7px;
+    font-family: 'Bree Serif', serif;
+   }
+   #contact-box label{
+    font-size: 22px;
+   }
+   #contact-box .btn{
+    width: 100%;
+    margin: 14px 5px;
+    font-size: 22px;
+    color:black ;
+    font-family: 'Bree Serif', serif;
+   }
+
+   footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+/* Utility classes */
+.h-primary{
+    padding: 12px;
+        font-size: 4rem;
+        font-family: 'Bree Serif', serif;
+}.h-secondary{
+    padding: 12px;
+        font-size: 3rem;
+}
+.btn{
+    padding: 10px 12px;
+    margin: 10px;
+    font-size: 1.3rem;
+    color: white;
+    background-color: #b4bb91;
+    border-radius: 15px;
+    width: 170px;
+    cursor: pointer;
+    }
+    .text-center{
+        text-align: center;
+    }
+
+
+
+   
